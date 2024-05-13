@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: prathyushamhellospringfunctionazure 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: prathyushamhellospringfunctionazure
+  template:
+    metadata:
+      labels:
+        app: prathyushamhellospringfunctionazure 
+    spec:
+      containers:
+        - name: prathyushamhellospringfunctionazure 
+          image: cscr1.azurecr.io/prathyushamhellospringfunctionazure
+          ports:
+          - containerPort: 80
